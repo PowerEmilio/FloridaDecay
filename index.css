@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap");
+
+/**Body y "*"*/
+/*?#region Body*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(img/LOL/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.links {
+	list-style: none;
+	text-decoration: none;
+	color: var(--white);
+  }
+/*?#endregion Body*/
+
+/**Barra de navegación*/
+/*?#region NavBar*/
+.logo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  height: 50%;
+  max-width: 200px;
+  display: flex;
+  margin-left: 20px;
+}
+.main_navbar {
+  z-index: 9900;
+  font-family: "Press Start 2P";
+  color: #fff;
+  background-color: #0d0d0d;
+  background-size: cover;
+  display: flex;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.main_navbar ul {
+  display: block;
+  text-align: center;
+  float: right;
+}
+.main_navbar ul li {
+  font-size: 15px;
+  display: inline;
+  list-style: none;
+  padding: 10px;
+  margin: 0px 10px 0px 0px;
+  float: right;
+}
+.main_navbar li:hover {
+  background-color: #373737;
+  cursor: pointer;
+  border-radius: 3px;
+  transform: scale(1.1);
+  transition: 0.2s;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 4px;
+  background-color: #0d0d0d;
+}
+.bar {
+  display: block;
+  width: 0;
+  height: inherit;
+  background: linear-gradient(90deg, #ffff00, #a6ff00, #66ff00, #ffff00);
+}
+/*?#endregion NavBar*/
+
+/**Resumen e imagenes del juego*/
+/*? #region ImgContainer*/
+
+.floridaDecay {
+  position: absolute;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  background-image: url(LOL/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* !IMAGENES Y LORE */
+/* #region imglore */
+
+.main_container {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+  text-align: center;
+}
+.container {
+  padding-top: 100px;
+}
+.image_container {
+  display: flex;
+  overflow: auto;
+  /*margin: 100px 50px;*/
+  scroll-snap-type: block;
+  width: 100%;
+  margin: auto;
+  float: left;
+  flex-flow: row nowrap;
+}
+.image_container > .item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+.image_container::-webkit-scrollbar {
+  background-color: #000;
+}
+.image_container::-webkit-scrollbar-thumb {
+  background-color: rgb(83, 83, 83);
+  border: 1px solid #000;
+}
+.image_container::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    to right,
+    /*abajo*/
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8b00ff
+  );
+}
+.game_lore_container {
+	display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  box-shadow: 5px 5px 10px #000;
+}
+.game_lore {
+  background-color: #0d0d0d;
+  color: #fff;
+  /*background: linear-gradient(to bottom right, #0d0d0d 90%, #333333 100%);*/
+  /*float: right;*/
+  /*margin-right: 100px;*/
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  cursor: default;
+}
+
+/* #endregion imglore */
+
+/* !REQUERIMIENTOS */
+/* #region requerimientos */
+
+
+.req_rec_ul .req_li:last-child{
+	padding-bottom: 10px;
+}
+.requirements_container {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 70%;
+  color: #fff;
+  background-color: rgb(12, 0, 26);
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.requirements_container .frs_h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 10px;
+  padding: 5px;
+  font-family: "Press Start 2P";
+  font-size: 20px;
+}
+.requirements_container .frs_h2:hover {
+  opacity: 80%;
+  animation: 5s rainbow infinite ease-in-out;
+  cursor: default;
+  -webkit-animation: 5s rainbow infinite ease-in-out;
+}
+.requirements_container .nds_h2 {
+  z-index: -100;
+  position: static;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: -40px;
+  padding: 5px;
+  font-family: "Press Start 2P";
+  font-size: 20px;
+}
+.requirements_container .nds_h2:hover {
+  cursor: default;
+  animation: 5s rainbow infinite ease-in-out;
+  animation-delay: 0.2s;
+  opacity: 40%;
+  -webkit-animation: 5s rainbow infinite ease-in-out;
+}
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    color: #ff00ff;
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+  }
+  20% {
+    color: #00ff00;
+  }
+  25% {
+    transform: rotate(1deg) scale(1.025);
+    -webkit-transform: rotate(1deg) scale(1.025);
+    -moz-transform: rotate(1deg) scale(1.025);
+    -ms-transform: rotate(1deg) scale(1.025);
+    -o-transform: rotate(1deg) scale(1.025);
+  }
+  40% {
+    color: #cc0000;
+  }
+  50% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+  }
+  60% {
+    color: #33ffff;
+  }
+  75% {
+    transform: rotate(-1deg) scale(1.025);
+    -webkit-transform: rotate(-1deg) scale(1.025);
+    -moz-transform: rotate(-1deg) scale(1.025);
+    -ms-transform: rotate(-1deg) scale(1.025);
+    -o-transform: rotate(-1deg) scale(1.025);
+  }
+  80% {
+    color: #ffff33;
+  }
+  100% {
+    color: #ff00ff;
+    transform: rotate(0deg) scale(1);
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+  }
+}
+
+.requirements_container ul {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.requirements_container ul li {
+  font-size: 20px;
+  font-weight: bold;
+  list-style: none;
+  display: block;
+}
+
+/* !REQUERIMIENTOS COLORES */
+/* #region colores */
+
+.requirements_container .req_min_ul li:nth-child(1):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #00ff00;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_min_ul li:nth-child(2):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff2424;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_min_ul li:nth-child(3):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #0099ff;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_min_ul li:nth-child(4):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffff33;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_min_ul li:nth-child(5):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff6600;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_min_ul li:nth-child(6):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff00ff;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(1):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #91ff00;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(2):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #33ffff;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(3):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff00ff;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(4):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #cc0000;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(5):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #00cc00;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(6):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffff00;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+}
+.requirements_container .req_rec_ul li:nth-child(7) {
+  margin-bottom: 20px;
+}
+.requirements_container .req_rec_ul li:nth-child(7):hover {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 20px;
+  color: #b0fff7;
+  background-color: rgb(20, 1, 43);
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+.idiomas_contenedor{
+	display: block;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.idiomas_contenedor h3{
+	text-align: center;
+  text-decoration: underline;
+  margin: 10px;
+  padding: 5px;
+  font-family: "Press Start 2P";
+  font-size: 20px;
+}
+.idioma{
+	display: inline-block;
+	width: 30%;
+}
+
+/* #endregion colores */
+
+/* #endregion requerimientos */
+
+@media screen and (max-width: 768px) {
+  .floridaDecay {
+    display: block;
+  }
+  .main_container{
+	width: 90%;
+  }
+  .image_container {
+    width: 100%;
+    float: none;
+  }
+  .game_lore_container {
+    float: none;
+    width: 90%;
+    margin-top: 50px;
+  }
+  .requirements_container {
+    width: 90%;
+  }
+  .main_navbar ul {
+    display: none;
+  }
+  .nds_h2{
+	display: none;
+  }
+  .idioma{
+	display: block;
+	margin: auto;
+  }
+}
+
+/* #endregion FloridaDecay */
