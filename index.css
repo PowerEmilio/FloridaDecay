@@ -22,7 +22,7 @@ body {
 /*?#endregion Body*/
 
 /**Barra de navegación*/
-/*?#region NavBar*/
+/*#region NavBar*/
 .logo {
   color: #fff;
   font-size: 30px;
@@ -184,7 +184,7 @@ body {
 .requirements_container {
   display: block;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   width: 70%;
   color: #fff;
@@ -416,10 +416,14 @@ body {
   padding: 5px;
   font-family: "Press Start 2P";
   font-size: 20px;
+  cursor: default;
 }
 .idioma{
 	display: inline-block;
 	width: 30%;
+}
+.link_req{
+  color: #d400ff;
 }
 
 /* #endregion colores */
@@ -445,8 +449,21 @@ body {
   .requirements_container {
     width: 90%;
   }
+  .logo{
+    height: 10px;
+    width: 50px;
+  }
+  .main_navbar{
+    max-height: 8%;
+  }
   .main_navbar ul {
-    display: none;
+    display: block;
+    width: 65%;
+  }
+  .main_navbar ul li{
+    font-size: 10%;
+    padding: 1%;
+    margin: 1%;
   }
   .nds_h2{
 	display: none;
